@@ -1,0 +1,48 @@
+import { Resource } from '../../../custom/I18n/types'
+
+export const i18n: Resource = {
+  ar: { default_unorderedlist: { label: 'قائمة غير مرتبة' } },
+  az: { default_unorderedlist: { label: 'Sırasız Siyahı' } },
+  bg: { default_unorderedlist: { label: 'Неподреден списък' } },
+  cs: { default_unorderedlist: { label: 'Neuspořádaný seznam' } },
+  de: { default_unorderedlist: { label: 'Ungeordnete Liste' } },
+  en: {
+    default_unorderedlist: {
+      label: 'Unordered List',
+      slash_menu_title: 'Lists',
+      slash_menu_label: 'Unordered list',
+    },
+  },
+  es: { default_unorderedlist: { label: 'Lista desordenada' } },
+  fa: { default_unorderedlist: { label: 'لیست بدون ترتیب' } },
+  fr: { default_unorderedlist: { label: 'Liste non ordonnée' } },
+  he: { default_unorderedlist: { label: 'רשימה לא מסודרת' } },
+  hr: { default_unorderedlist: { label: 'Neuređeni popis' } },
+  hu: { default_unorderedlist: { label: 'Rendezetlen lista' } },
+  it: { default_unorderedlist: { label: 'Elenco non ordinato' } },
+  ja: { default_unorderedlist: { label: '順不同リスト' } },
+  ko: { default_unorderedlist: { label: '비정렬 목록' } },
+  my: { default_unorderedlist: { label: 'Senarai Tidak Tertib' } },
+  nb: { default_unorderedlist: { label: 'Usortert liste' } },
+  nl: { default_unorderedlist: { label: 'Ongeordende lijst' } },
+  pl: { default_unorderedlist: { label: 'Nieuporządkowana lista' } },
+  pt: { default_unorderedlist: { label: 'Lista Não Ordenada' } },
+  ro: { default_unorderedlist: { label: 'Listă neordonată' } },
+  rs: { default_unorderedlist: { label: 'Neporedani spisak' } },
+  'rs-latin': { default_unorderedlist: { label: 'Neuređena Lista' } },
+  ru: {
+    default_unorderedlist: {
+      label: 'Несортированный список',
+      slash_menu_title: 'Списки',
+      slash_menu_label: 'Несортированный список',
+    },
+  },
+  sk: { default_unorderedlist: { label: 'Neusporiadaný zoznam' } },
+  sv: { default_unorderedlist: { label: 'Oordnad lista' } },
+  th: { default_unorderedlist: { label: 'รายการที่ไม่ได้เรียงลำดับ' } },
+  tr: { default_unorderedlist: { label: 'Sırasız Liste' } },
+  uk: { default_unorderedlist: { label: 'Невпорядкований список' } },
+  vi: { default_unorderedlist: { label: 'Danh sách không theo thứ tự' } },
+  zh: { default_unorderedlist: { label: '无序列表' } },
+  'zh-TW': { default_unorderedlist: { label: '無順序列表' } },
+}

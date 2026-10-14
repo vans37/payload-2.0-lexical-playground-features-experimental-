@@ -1,0 +1,44 @@
+.view-file-data-container {
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  position: absolute;
+  left: 4rem;
+  top: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-size: 12px;
+  z-index: 99;
+
+  .content {
+    padding: 1rem;
+
+    .content-key-value {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .key {
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+.view-file-data-icon {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+}

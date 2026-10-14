@@ -1,0 +1,90 @@
+{
+  "name": "lexical-custom-features",
+  "version": "1.0.2",
+  "description": "Adaptation of lexical playground features to payload 2.0",
+  "repository": {
+    "type": "git",
+    "url": "",
+    "directory": "packages/lexical-custom-features"
+  },
+  "author": "vans37",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "pnpm copyfiles && pnpm build:swc && pnpm build:types",
+    "build:swc": "swc ./src -d ./dist --config-file .swcrc",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "clean": "rimraf {dist,*.tsbuildinfo}",
+    "copyfiles": "copyfiles -u 1 \"src/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png,json}\" dist/",
+    "prepublishOnly": "pnpm clean && pnpm build"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "server-only": "^0.0.1",
+    "slugify": "^1.6.6",
+    "zustand": "^5.0.0-rc.2",
+    "bson-objectid": "2.0.4",
+    "deep-equal": "2.2.3",
+    "react-toastify": "10.0.5",
+    "i18next": "22.5.1",
+    "react-i18next": "11.18.6"
+  },
+  "peerDependencies": {
+    "@payloadcms/richtext-lexical": "^0.11.3",
+    "@lexical/code": "0.13.1",
+    "@lexical/dragon": "0.13.1",
+    "@lexical/hashtag": "0.13.1",
+    "@lexical/history": "0.13.1",
+    "@lexical/overflow": "0.13.1",
+    "@lexical/plain-text": "0.13.1",
+    "@lexical/table": "0.13.1",
+    "@lexical/text": "0.13.1",
+    "@lexical/headless": "0.13.1",
+    "@lexical/link": "0.13.1",
+    "@lexical/list": "0.13.1",
+    "@lexical/mark": "0.13.1",
+    "@lexical/markdown": "0.13.1",
+    "@lexical/react": "0.13.1",
+    "@lexical/rich-text": "0.13.1",
+    "@lexical/selection": "0.13.1",
+    "@lexical/utils": "0.13.1",
+    "@faceless-ui/modal": "2.0.2",
+    "@faceless-ui/scroll-info": "2.0.0-beta.0",
+    "@faceless-ui/window-info": "2.1.1",
+    "payload": "^2.30.0",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@payloadcms/eslint-config": "workspace:*",
+    "@types/json-schema": "7.0.15",
+    "@types/node": "20.6.2",
+    "@types/react": "18.2.15",
+    "payload": "workspace:*"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "exports": null,
+    "main": "./dist/index.js",
+    "registry": "https://registry.npmjs.org/",
+    "types": "./dist/index.d.ts"
+  },
+  "files": [
+    "dist"
+  ]
+}

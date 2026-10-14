@@ -1,0 +1,14 @@
+@import 'payload/scss';
+
+.font-dropdown {
+    padding: 4px 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-background-gray;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+    }
+}

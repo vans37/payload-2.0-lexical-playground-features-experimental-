@@ -1,0 +1,168 @@
+import type {
+  Feature,
+  FeatureProviderMap,
+  ResolvedFeatureMap,
+  SanitizedEditorConfig,
+} from '@payloadcms/richtext-lexical'
+
+import type { BaseSelection, EditorConfig, LexicalEditor, SerializedEditorState } from 'lexical'
+import type { FieldPermissions } from 'payload/auth'
+import type { FieldTypes } from 'payload/config'
+import type { RichTextFieldProps } from 'payload/types'
+import type { i18n } from 'i18next'
+import { Resource } from '../custom/I18n/types'
+
+export interface EditorConfigContext {
+  editorConfig: SanitizedEditorConfig
+  field: FieldProps
+  uuid: string
+}
+
+export type FieldProps = RichTextFieldProps<SerializedEditorState, AdapterProps, AdapterProps> & {
+  fieldTypes: FieldTypes
+  indexPath: string
+  path?: string
+  permissions: FieldPermissions
+}
+
+export interface AdapterProps {
+  editorConfig: SanitizedEditorConfig
+}
+
+//add support for toolbars and translation
+export type FeatureToolbar = Feature & {
+  toolbarFixed?: {
+    groups: ToolbarGroup[]
+  }
+  toolbarInline?: {
+    groups: ToolbarGroup[]
+  }
+  translation?: Resource
+}
+
+export type FeatureProviderWithToolbar = {
+  /** Keys of dependencies needed for this feature. These dependencies do not have to be loaded first */
+  dependencies?: string[]
+  /** Keys of priority dependencies needed for this feature. These dependencies have to be loaded first and are available in the `feature` property*/
+  dependenciesPriority?: string[]
+  /** Keys of soft-dependencies needed for this feature. These dependencies are optional, but are considered as last-priority in the loading process */
+  dependenciesSoft?: string[]
+  feature: (props: {
+    /** unsanitizedEditorConfig.features, but mapped */
+    featureProviderMap: FeatureProviderMap
+    resolvedFeatures: ResolvedFeatureMap
+    unsanitizedEditorConfig: EditorConfig
+  }) => FeatureToolbar
+  key: string
+}
+
+export type ToolbarGroup = ToolbarButtonsGroup | ToolbarDropdownGroup
+
+export type ToolbarDropdownGroup = {
+  /**
+   * The dropdown toolbar ChildComponent allows you to pass in a React Component which will be displayed within the dropdown button.
+   */
+  ChildComponent?: React.FC
+  /**
+   * This is optional and controls if the toolbar group is highlighted or not.
+   */
+  isEnabled?: ({
+    editor,
+    editorConfigContext,
+    selection,
+  }: {
+    editor: LexicalEditor
+    editorConfigContext: EditorConfigContext
+    selection: BaseSelection
+  }) => boolean
+  /**
+   * All toolbar items part of this toolbar group need to be added here.
+   */
+  items: Array<ToolbarGroupItem>
+  /**
+   * Each toolbar group needs to have a unique key. Groups with the same keys will have their items merged together.
+   */
+  key: string
+  /**
+   * Determines where the toolbar group will be.
+   */
+  order?: number
+  /**
+   * Controls the toolbar group type. Set to `dropdown` to create a buttons toolbar group, which displays toolbar items vertically using their icons and labels, if the dropdown is open.
+   */
+  type: 'dropdown'
+}
+
+export type ToolbarButtonsGroup = {
+  /**
+   * All toolbar items part of this toolbar group need to be added here.
+   */
+  items: Array<ToolbarGroupItem>
+  /**
+   * Each toolbar group needs to have a unique key. Groups with the same keys will have their items merged together.
+   */
+  key: string
+  /**
+   * Determines where the toolbar group will be.
+   */
+  order?: number
+  /**
+   * Controls the toolbar group type. Set to `buttons` to create a buttons toolbar group, which displays toolbar items horizontally using only their icons.
+   */
+  type: 'buttons'
+}
+
+export type ToolbarGroupItem = {
+  /** A React component which is rendered within your toolbar item's default button component. Usually, you want this to be an icon. */
+  ChildComponent?: React.FC
+  /** A React component which is rendered in place of the toolbar item's default button component, thus completely replacing it. The `ChildComponent` and `onSelect` properties will be ignored. */
+  Component?: React.FC<{
+    active?: boolean
+    anchorElem: HTMLElement
+    editor: LexicalEditor
+    enabled?: boolean
+    item: ToolbarGroupItem
+  }>
+  /** This is optional and controls if the toolbar item is highlighted or not. */
+  isActive?: ({
+    editor,
+    editorConfigContext,
+    selection,
+  }: {
+    editor: LexicalEditor
+    editorConfigContext: EditorConfigContext
+    selection: BaseSelection | null
+  }) => boolean
+  /** This is optional and controls if the toolbar item is clickable or not. If `false` is returned here, it will be grayed out and unclickable. */
+  isEnabled?: ({
+    editor,
+    editorConfigContext,
+    selection,
+  }: {
+    editor: LexicalEditor
+    editorConfigContext: EditorConfigContext
+    selection: BaseSelection | null
+  }) => boolean
+  /** Each toolbar item needs to have a unique key. */
+  key: string
+  /** The label will be displayed in your toolbar item, if it's within a dropdown group. In order to make use of i18n, this can be a function. */
+  label?: ((args: { i18n: i18n }) => string) | string
+  /** Each toolbar item needs to have a unique key. */
+  onSelect?: ({ editor, isActive }: { editor: LexicalEditor; isActive: boolean }) => void
+  order?: number
+}
+
+type CustomLabel = {
+  namespace: string
+  key: string
+  /** https://www.i18next.com/translation-function/interpolation  */
+  options: Record<string, any>
+}
+
+export type FileResultDataURL = {
+  /** Base64 result */
+  result: string
+  file: File
+}
+
+export type GetAdminThumbnail = (args: { doc: Record<string, unknown> }) => false | null | string

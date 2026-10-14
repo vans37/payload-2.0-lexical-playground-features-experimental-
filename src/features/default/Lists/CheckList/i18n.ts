@@ -1,0 +1,48 @@
+import { Resource } from '../../../custom/I18n/types'
+
+export const i18n: Resource = {
+  ar: { default_checklist: { label: 'قائمة التحقق' } },
+  az: { default_checklist: { label: 'Yoxlama Siyahısı' } },
+  bg: { default_checklist: { label: 'Списък за проверка' } },
+  cs: { default_checklist: { label: 'Seznam kontrol' } },
+  de: { default_checklist: { label: 'Checkliste' } },
+  en: {
+    default_checklist: {
+      label: 'Check List',
+      slash_menu_title: 'Lists',
+      slash_menu_label: 'Check List',
+    },
+  },
+  es: { default_checklist: { label: 'Lista de comprobación' } },
+  fa: { default_checklist: { label: 'لیست بررسی' } },
+  fr: { default_checklist: { label: 'Liste de contrôle' } },
+  he: { default_checklist: { label: 'רשימת בדיקה' } },
+  hr: { default_checklist: { label: 'Kontrolni popis' } },
+  hu: { default_checklist: { label: 'Ellenőrzőlista' } },
+  it: { default_checklist: { label: 'Lista di controllo' } },
+  ja: { default_checklist: { label: 'チェックリスト' } },
+  ko: { default_checklist: { label: '체크 리스트' } },
+  my: { default_checklist: { label: 'Senarai Semak' } },
+  nb: { default_checklist: { label: 'Sjekkliste' } },
+  nl: { default_checklist: { label: 'Checklist' } },
+  pl: { default_checklist: { label: 'Lista kontrolna' } },
+  pt: { default_checklist: { label: 'Lista de Verificação' } },
+  ro: { default_checklist: { label: 'Listă de verificare' } },
+  rs: { default_checklist: { label: 'Lista provere' } },
+  'rs-latin': { default_checklist: { label: 'Lista provere' } },
+  ru: {
+    default_checklist: {
+      label: 'Список Проверки',
+      slash_menu_title: 'Списки',
+      slash_menu_label: 'Список проверки',
+    },
+  },
+  sk: { default_checklist: { label: 'Kontrolný zoznam' } },
+  sv: { default_checklist: { label: 'Kontrollista' } },
+  th: { default_checklist: { label: 'รายการตรวจสอบ' } },
+  tr: { default_checklist: { label: 'Kontrol Listesi' } },
+  uk: { default_checklist: { label: 'Список перевірки' } },
+  vi: { default_checklist: { label: 'Danh sách kiểm tra' } },
+  zh: { default_checklist: { label: '检查清单' } },
+  'zh-TW': { default_checklist: { label: '檢查清單' } },
+}

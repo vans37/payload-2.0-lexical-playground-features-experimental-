@@ -1,0 +1,39 @@
+.uploads-drawer {
+  &__controls {
+    width: 100%;
+    // position: sticky;
+    // top: -1rem;
+    z-index: 1;
+    background-color: var(--theme-bg);
+  }
+
+  
+
+  &__upper-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__select-limit {
+    span {
+      margin-right: 1rem;
+    }
+  }
+
+  &__select-collection {
+    span {
+      margin-right: 1rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    button {
+      margin: 1rem 1rem 1rem 0;
+    }
+  }
+}

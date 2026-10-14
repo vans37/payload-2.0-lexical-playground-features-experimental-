@@ -1,0 +1,70 @@
+.ai-assistant-box{
+    display: block;
+    position: absolute;
+    min-width: 300px;
+    max-width: 75ch;
+    min-height: 80px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 8px;
+    z-index: 99;
+    animation: show-input-box 0.4s ease;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin-left: 0.5em;
+        right: -1em;
+        top: 0;
+        left: calc(50% + 0.25em);
+        box-sizing: border-box;
+        border: 0.5em solid black;
+        border-color: transparent transparent #fff #fff;
+        transform-origin: 0 0;
+        transform: rotate(135deg);
+        box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.05);
+      }
+
+    .btn-group {
+        button {
+            margin-top: .5rem;
+            margin-right: 1rem;
+        }
+    }
+
+    div.selection-text {
+        margin: 1rem 0;
+        padding: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    textarea.user-input {
+        width: 100%;
+        resize: none;
+    }
+
+    .model-response {
+        margin: 1rem 0;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        padding: 1rem;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    & > .ai-nested-editor {
+        .ai-nested-editor-content {
+            border: solid 1px rgba(0, 0, 0, 0.05);
+            padding: 1rem;
+            border-radius: 5px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    }
+}
+  

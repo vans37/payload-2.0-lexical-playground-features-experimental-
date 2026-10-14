@@ -1,0 +1,64 @@
+span.inline-editor-image {
+  cursor: default;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.inline-editor-image {
+  img {
+    max-width: 100%;
+    cursor: default;
+
+    &.focused {
+      outline: 2px solid rgb(60, 132, 244);
+
+      &.draggable {
+        cursor: grab;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+    }
+  }
+
+  .image-caption-container .tree-view-output {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  &.position-full {
+    margin: 1em 0 1em 0;
+  }
+
+  &.position-left {
+    float: left;
+    width: 50%;
+    margin: 1em 1em 0 0;
+  }
+
+  &.position-right {
+    float: right;
+    width: 50%;
+    margin: 1em 0 0 1em;
+  }
+
+  .image-edit-button {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 8px;
+    margin: 0 auto;
+    user-select: none;
+  }
+
+  .image-caption-container {
+    display: block;
+    background-color: #f4f4f4;
+    min-width: 100%;
+    color: #000;
+    overflow: hidden;
+  }
+}

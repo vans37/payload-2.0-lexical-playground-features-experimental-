@@ -1,0 +1,48 @@
+import { Resource } from '../../custom/I18n/types'
+
+export const i18n: Resource = {
+  ar: { default_blockquote: { label: 'اقتباس' } },
+  az: { default_blockquote: { label: 'Blokkvota' } },
+  bg: { default_blockquote: { label: 'Цитат' } },
+  cs: { default_blockquote: { label: 'Citace' } },
+  de: { default_blockquote: { label: 'Blockzitat' } },
+  en: {
+    default_blockquote: {
+      label: 'Blockquote',
+      slash_menu_title: 'Basic',
+      slash_menu_label: 'Blockquote',
+    },
+  },
+  es: { default_blockquote: { label: 'Cita en bloque' } },
+  fa: { default_blockquote: { label: 'نقل قول بلوکی' } },
+  fr: { default_blockquote: { label: 'Citation' } },
+  he: { default_blockquote: { label: 'בלוק ציטוט' } },
+  hr: { default_blockquote: { label: 'Blok citat' } },
+  hu: { default_blockquote: { label: 'Idézetblokk' } },
+  it: { default_blockquote: { label: 'Citazione' } },
+  ja: { default_blockquote: { label: 'ブロッククォート' } },
+  ko: { default_blockquote: { label: '인용구' } },
+  my: { default_blockquote: { label: 'ဒေါင်းချီးခြင်း' } },
+  nb: { default_blockquote: { label: 'Blokksitat' } },
+  nl: { default_blockquote: { label: 'Citaat' } },
+  pl: { default_blockquote: { label: 'Cytat blokowy' } },
+  pt: { default_blockquote: { label: 'Citação em bloco' } },
+  ro: { default_blockquote: { label: 'Citat' } },
+  rs: { default_blockquote: { label: 'Blok citat' } },
+  'rs-latin': { default_blockquote: { label: 'Blok citata' } },
+  ru: {
+    default_blockquote: {
+      label: 'Цитата',
+      slash_menu_title: 'Базовые',
+      slash_menu_label: 'Цитата',
+    },
+  },
+  sk: { default_blockquote: { label: 'Citát' } },
+  sv: { default_blockquote: { label: 'Blockcitat' } },
+  th: { default_blockquote: { label: '[SKIPPED]' } },
+  tr: { default_blockquote: { label: 'Alıntı' } },
+  uk: { default_blockquote: { label: 'Блокцитата' } },
+  vi: { default_blockquote: { label: 'Trích dẫn' } },
+  zh: { default_blockquote: { label: '块引用' } },
+  'zh-TW': { default_blockquote: { label: '引用塊' } },
+}

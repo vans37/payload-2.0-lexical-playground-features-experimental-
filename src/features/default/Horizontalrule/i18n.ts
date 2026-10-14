@@ -1,0 +1,48 @@
+import { Resource } from '../../custom/I18n/types'
+
+export const i18n: Resource = {
+  ar: { default_horizontalrule: { label: 'القاعدة الأفقية' } },
+  az: { default_horizontalrule: { label: 'Üfüqi Xətt' } },
+  bg: { default_horizontalrule: { label: 'Хоризонтална линия' } },
+  cs: { default_horizontalrule: { label: 'Vodorovný pravítko' } },
+  de: { default_horizontalrule: { label: 'Trennlinie' } },
+  en: {
+    default_horizontalrule: {
+      label: 'Horizontal Rule',
+      slash_menu_title: 'Basic',
+      slash_menu_label: 'Horizontal Rule',
+    },
+  },
+  es: { default_horizontalrule: { label: 'Regla Horizontal' } },
+  fa: { default_horizontalrule: { label: 'قاعده افقی' } },
+  fr: { default_horizontalrule: { label: 'Règle horizontale' } },
+  he: { default_horizontalrule: { label: 'קו אופקי' } },
+  hr: { default_horizontalrule: { label: 'Vodoravna linija' } },
+  hu: { default_horizontalrule: { label: 'Vízszintes vonal' } },
+  it: { default_horizontalrule: { label: 'Regola Orizzontale' } },
+  ja: { default_horizontalrule: { label: '水平線' } },
+  ko: { default_horizontalrule: { label: '수평 규칙' } },
+  my: { default_horizontalrule: { label: 'Peraturan Mendatar' } },
+  nb: { default_horizontalrule: { label: 'Horisontal Regel' } },
+  nl: { default_horizontalrule: { label: 'Horizontale Regel' } },
+  pl: { default_horizontalrule: { label: 'Pozioma Linia' } },
+  pt: { default_horizontalrule: { label: 'Regra Horizontal' } },
+  ro: { default_horizontalrule: { label: 'Linie orizontală' } },
+  rs: { default_horizontalrule: { label: 'Horizontalna linija' } },
+  'rs-latin': { default_horizontalrule: { label: 'Horizontalna linija' } },
+  ru: {
+    default_horizontalrule: {
+      label: 'Горизонтальная линия',
+      slash_menu_title: 'Базовые',
+      slash_menu_label: 'Горизонтальная линия',
+    },
+  },
+  sk: { default_horizontalrule: { label: 'Vodorovná čiara' } },
+  sv: { default_horizontalrule: { label: 'Horisontell linje' } },
+  th: { default_horizontalrule: { label: 'กฎขีดตรง' } },
+  tr: { default_horizontalrule: { label: 'Yatay Çizgi' } },
+  uk: { default_horizontalrule: { label: 'Горизонтальна лінія' } },
+  vi: { default_horizontalrule: { label: 'Quy tắc ngang' } },
+  zh: { default_horizontalrule: { label: '水平线' } },
+  'zh-TW': { default_horizontalrule: { label: '水平線' } },
+}

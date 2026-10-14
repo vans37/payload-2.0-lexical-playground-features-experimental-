@@ -1,0 +1,24 @@
+# dependencies and generated artifacts
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+*.tgz
+*.zip
+
+# environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# editor/system
+.DS_Store
+.idea/
+.vscode/
+
+# temporary files
+.tmp/
+.cache/

@@ -1,0 +1,69 @@
+.uploads-drawer {
+
+  .lazy-image {
+    &__wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  
+    &__collection {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.25rem 0.5rem;
+      font-size: 12px;
+      background: $color-dark-gray;
+      color: #fff;
+      border-radius: $style-radius-s;
+    }
+  
+    &__media-info-popup {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+
+      @include small-break {
+        display: none;
+      }
+    }
+
+    &__popup_trigger {
+      background-color: $color-dark-gray;
+      border-radius: $style-radius-s;
+    }
+
+
+    &__image {
+      border: 1px solid $color-dark-gray;
+      width: 100%;
+      height: 100%;
+      border-radius: $style-radius-s;
+      object-fit: contain;
+      object-position: center;
+      cursor: pointer;
+    }
+
+    &__select {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      min-width: auto;
+      max-width: auto;
+    }
+
+  }
+
+  &__image-skeleton {
+    width: 100%;
+    height: 100%;
+    background: $color-light-gray;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+  }
+
+}

@@ -1,0 +1,54 @@
+@import 'payload/scss';
+
+.gallery {
+  & .gallery-controls {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    & .controls-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      z-index: 2;
+      & .collapsible-btn {
+        &::after {
+          content: '\002B';
+        }
+        &.expanded::after {
+          content: '\2212';
+        }
+      }
+      & .expandable-controls {
+        width: 0px;
+        height: 0;
+        display: flex;
+        align-items: center ;
+        flex-flow: row wrap;
+        overflow: hidden;
+        & .inputs {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: $color-dark-gray;
+          padding: 1rem;
+          border-radius: 4px;
+          color: #fff;
+        }
+        button {
+          margin: 0.25rem;
+         
+          width: fit-content;
+        }
+        &.expanded {
+          width: auto;
+          height: auto;
+        }
+        label {
+          display: block;
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}

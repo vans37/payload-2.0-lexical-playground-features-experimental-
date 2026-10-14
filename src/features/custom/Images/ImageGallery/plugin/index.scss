@@ -1,0 +1,45 @@
+@import 'payload/scss';
+
+.gallery {
+  width: 100%;
+  min-height: 250px;
+  max-height: 700px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 10rem 2rem;
+  border: 1px solid $color-light-gray;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 2px;
+  span.editor-image > div {
+    border: 2px solid $color-dark-gray;
+    border-radius: $style-radius-s;
+    & > img {
+      width: 100% !important;
+      max-height: 250px !important;
+      object-fit: cover !important;
+      object-position: center !important;
+    }
+  }
+  &.selected {
+    outline: 1px solid blue;
+  }
+  //hide it in gallery
+  & .controller-node {
+    display: none;
+  }
+}
+
+.editor-shell {
+  span.editor-image {
+    cursor: pointer;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}

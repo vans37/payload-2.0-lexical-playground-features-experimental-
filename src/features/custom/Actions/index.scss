@@ -1,0 +1,32 @@
+html[data-theme='dark'] {
+  .actions-feature {
+    &__icon {
+      svg {
+        fill: var(--color-base-800);
+      }
+    }
+  }
+}
+
+.actions-feature {
+  &__actions {
+    position: absolute;
+    text-align: right;
+    margin: 10px;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+  }
+
+  &__button {
+    margin-right: 0.5rem;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    svg {
+      fill: var(--color-base-50);
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@import 'payload/scss';
+
+.gallery-image {
+  position: relative;
+  img {
+    cursor: pointer !important;
+  }
+  & .delete-image {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background: #000;
+    color: red;
+  }
+
+  & .upload-type {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: $color-dark-gray;
+    border-radius: $style-radius-s;
+    color: #fff;
+    font-size: 12px;
+    max-width: 100%;
+    padding: .125rem .25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & .caption-text {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: $color-dark-gray;
+    border-radius: $style-radius-s;
+    color: #fff;
+    font-size: 12px;
+    max-width: 100%;
+    padding: .125rem .25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & .edit-caption {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    z-index: 100;
+    .edit-area {
+      textarea {
+        resize: vertical;
+        max-height: 200px;
+        width: 100%;
+        padding: 2rem 0.5rem;
+      }
+
+      .action-btn {
+        cursor: pointer;
+        margin: 0 0.125rem;
+        padding: 0.25rem 0.5rem;
+        z-index: 99;
+      }
+
+    }
+  }
+
+  & .add-caption-btn {
+    width: 100px;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+.ImageNode__contentEditable {
+  min-height: 20px;
+  border: 0px;
+  resize: none;
+  cursor: text;
+  caret-color: rgb(5, 5, 5);
+  display: block;
+  position: relative;
+  outline: 0px;
+  padding: 10px;
+  user-select: text;
+  font-size: 12px;
+  width: calc(100% - 20px);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.ImageNode__placeholder {
+  font-size: 12px;
+  color: #888;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 10px;
+  left: 10px;
+  user-select: none;
+  white-space: nowrap;
+  display: inline-block;
+  pointer-events: none;
+}
+
+.image-control-wrapper--resizing {
+  touch-action: none;
+}

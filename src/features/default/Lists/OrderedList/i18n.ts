@@ -1,0 +1,48 @@
+import { Resource } from '../../../custom/I18n/types'
+
+export const i18n: Resource = {
+  ar: { default_orderedlist: { label: 'قائمة مرتبة' } },
+  az: { default_orderedlist: { label: 'Sıralı Siyahı' } },
+  bg: { default_orderedlist: { label: 'Подреден списък' } },
+  cs: { default_orderedlist: { label: 'Seřazený seznam' } },
+  de: { default_orderedlist: { label: 'Geordnete Liste' } },
+  en: {
+    default_orderedlist: {
+      label: 'Ordered List',
+      slash_menu_title: 'Lists',
+      slash_menu_label: 'Ordered List',
+    },
+  },
+  es: { default_orderedlist: { label: 'Lista ordenada' } },
+  fa: { default_orderedlist: { label: 'لیست مرتب شده' } },
+  fr: { default_orderedlist: { label: 'Liste ordonnée' } },
+  he: { default_orderedlist: { label: 'רשימה ממוינת' } },
+  hr: { default_orderedlist: { label: 'Naručeni popis' } },
+  hu: { default_orderedlist: { label: 'Rendelt lista' } },
+  it: { default_orderedlist: { label: 'Elenco ordinato' } },
+  ja: { default_orderedlist: { label: '順序付きリスト' } },
+  ko: { default_orderedlist: { label: '주문된 목록' } },
+  my: { default_orderedlist: { label: 'စီစဉ်ထားသော စာရင်း' } },
+  nb: { default_orderedlist: { label: 'Ordnet Liste' } },
+  nl: { default_orderedlist: { label: 'Geordende Lijst' } },
+  pl: { default_orderedlist: { label: 'Uporządkowana lista' } },
+  pt: { default_orderedlist: { label: 'Lista Ordenada' } },
+  ro: { default_orderedlist: { label: 'Lista ordonată' } },
+  rs: { default_orderedlist: { label: 'Naručeni Spisak' } },
+  'rs-latin': { default_orderedlist: { label: 'Naručeni spisak' } },
+  ru: {
+    default_orderedlist: {
+      label: 'Упорядоченный список',
+      slash_menu_title: 'Списки',
+      slash_menu_label: 'Упорядоченный список',
+    },
+  },
+  sk: { default_orderedlist: { label: 'Zoradený zoznam' } },
+  sv: { default_orderedlist: { label: 'Ordnad Lista' } },
+  th: { default_orderedlist: { label: 'รายการที่ถูกจัดลำดับ' } },
+  tr: { default_orderedlist: { label: 'Sıralı Liste' } },
+  uk: { default_orderedlist: { label: 'Впорядкований список' } },
+  vi: { default_orderedlist: { label: 'Danh sách đã sắp xếp' } },
+  zh: { default_orderedlist: { label: '有序列表' } },
+  'zh-TW': { default_orderedlist: { label: '有序列表' } },
+}

@@ -1,0 +1,48 @@
+import { Resource } from '../../custom/I18n/types'
+
+export const i18n: Resource = {
+  ar: { default_relationship: { label: 'العلاقة' } },
+  az: { default_relationship: { label: 'Münasibət' } },
+  bg: { default_relationship: { label: 'Връзка' } },
+  cs: { default_relationship: { label: 'Vztah' } },
+  de: { default_relationship: { label: 'Beziehung' } },
+  en: {
+    default_relationship: {
+      label: 'Relationship',
+      slash_menu_title: 'Базовые',
+      slash_menu_label: 'Отношение',
+    },
+  },
+  es: { default_relationship: { label: 'Relación' } },
+  fa: { default_relationship: { label: 'روابط' } },
+  fr: { default_relationship: { label: 'Relation' } },
+  he: { default_relationship: { label: 'יחסים' } },
+  hr: { default_relationship: { label: 'Odnos' } },
+  hu: { default_relationship: { label: 'Kapcsolat' } },
+  it: { default_relationship: { label: 'Relazione' } },
+  ja: { default_relationship: { label: '関係性' } },
+  ko: { default_relationship: { label: '관계' } },
+  my: { default_relationship: { label: 'Hubungan' } },
+  nb: { default_relationship: { label: 'Forhold' } },
+  nl: { default_relationship: { label: 'Relatie' } },
+  pl: { default_relationship: { label: 'Relacja' } },
+  pt: { default_relationship: { label: 'Relacionamento' } },
+  ro: { default_relationship: { label: 'Relație' } },
+  rs: { default_relationship: { label: 'Veza' } },
+  'rs-latin': { default_relationship: { label: 'Odnos' } },
+  ru: {
+    default_relationship: {
+      label: 'Отношение',
+      slash_menu_title: 'Базовые',
+      slash_menu_label: 'Отношение',
+    },
+  },
+  sk: { default_relationship: { label: 'Vzťah' } },
+  sv: { default_relationship: { label: 'Relation' } },
+  th: { default_relationship: { label: 'ความสัมพันธ์' } },
+  tr: { default_relationship: { label: 'İlişki' } },
+  uk: { default_relationship: { label: 'Стосунки' } },
+  vi: { default_relationship: { label: 'Mối quan hệ' } },
+  zh: { default_relationship: { label: '关系' } },
+  'zh-TW': { default_relationship: { label: '關係' } },
+}

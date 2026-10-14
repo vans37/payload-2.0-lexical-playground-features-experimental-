@@ -1,0 +1,141 @@
+@import 'payload/scss';
+@import './PlaygroundEditorTheme.scss';
+@import './lexical.scss';
+
+
+@mixin filterSvgIconWhite {
+  filter: invert(99%) sepia(99%) saturate(3%) hue-rotate(134deg) brightness(104%) contrast(100%);
+}
+
+@mixin filterSvgIconBlack {
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(31deg) brightness(95%) contrast(103%);
+}
+
+.rich-text-lexical {
+  display: flex;
+
+  .ContentEditable__root {
+    min-height: 350px;
+  }
+
+  .editor-scroller {
+    z-index: 99!important;
+  }
+
+  .errorBoundary {
+    pre {
+      text-wrap: unset;
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+    position: relative;
+  }
+
+  
+  &--read-only {
+    .editor-shell {
+      .editor {
+        background: var(--theme-elevation-200);
+        color: var(--theme-elevation-450);
+        padding: base(0.5);
+      }
+    }
+  }
+
+  //inline and fixed toolbars are used instead
+  .floating-select-toolbar-popup {
+    display: none!important;
+  }
+}
+
+
+
+html[data-theme='light'] {
+  .rich-text-lexical {
+    &.error {
+      .editor-shell {
+        @include lightInputError;
+      }
+    }
+  }
+
+  .editor-shell {
+    color: #000;
+  }
+  
+  .floating-select-toolbar-popup__dropdown-items {
+    width: fit-content;
+  }
+}
+
+html[data-theme='dark'] {
+  .rich-text-lexical {
+    &.error {
+      .editor-shell {
+        @include darkInputError;
+      }
+    }
+  }
+
+  .editor-shell {
+    color: #FFF;
+  }
+
+  //collapsible container
+  details.Collapsible__container {
+    background-color: $color-dark-gray;
+    .Collapsible__title::before {
+      border-top-color: #FFF;
+    }
+  }
+
+  //color picker
+  .color-picker-wrapper {
+    .Input__label {
+      color: #FFF;
+    }
+  }
+
+  //add block menu
+  button.add-block-menu .icon {
+    @include filterSvgIconWhite();
+    opacity: 1;
+  }
+
+  //draggable block menu
+  div.draggable-block-menu .icon {
+    @include filterSvgIconWhite();
+    opacity: 1;
+  }
+
+  //slash menu 
+  #slash-menu {
+    .slash-menu-popup {
+      background-color: $color-dark-gray;
+      .slash-menu-popup__group-title {
+        color: #FFF;
+      }
+      .slash-menu-popup__item {
+        color: #FFF;
+      }
+      .slash-menu-popup__item--selected {
+        color: #000;
+        .icon {
+          color: #000;
+        }
+      }
+      .icon {
+        color: #FFF;
+      }
+    }
+  }
+
+}
+
+//otherwise fields below rich text will cover slash menu
+//when it is opened at the bottom of richtext container
+.field-type.text {
+  position: static;
+}

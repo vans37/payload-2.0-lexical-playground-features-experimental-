@@ -1,0 +1,70 @@
+@import 'payload/scss';
+
+html[data-theme='dark'] {
+  .layout-feature {
+    &__item {
+        color: var(--color-base-50);
+        &:hover {
+            background-color: var(--color-base-100);
+            color: var(--color-base-800);
+        }
+    }
+    &__dialog-dropdown {
+      border: 1px solid var(--color-base-100);
+    }
+  }
+}
+
+.layout-feature {
+  &__item {
+    margin: 1rem;
+    padding: 8px;
+    color: var(--color-base-800);
+    cursor: pointer;
+    line-height: 16px;
+    font-size: 15px;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: space-between;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 0;
+    max-width: 250px;
+    min-width: 100px;
+    &:hover {
+      background-color: var(--color-base-50);
+    }
+  }
+
+  &__dialog-dropdown {
+    display: block;
+    background-color: transparent;
+    margin-bottom: 10px;
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-base-800);
+    border-radius: $style-radius-s;
+    cursor: pointer;
+  }
+
+  &__text {
+    display: flex;
+    line-height: 20px;
+    flex-grow: 1;
+    min-width: 150px;
+  }
+}
+
+.LexicalEditorTheme {
+  &__layoutContainer {
+    display: grid;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  &__layoutItem {
+    border: 1px dashed var(--color-base-200);
+    padding: 8px 16px;
+  }
+}

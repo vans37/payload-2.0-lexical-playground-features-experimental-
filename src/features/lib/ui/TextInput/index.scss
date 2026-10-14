@@ -1,0 +1,22 @@
+.text-input-component {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__label {
+    margin: 1rem;
+  }
+  &__input {
+    border: 1px solid #999;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    min-width: 0;
+    max-width: 100px;
+  }
+}
